@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmarks
+cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   17839	1136539143 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   19498	1213282944 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   16694	1021815259 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   17059	1018335884 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   16891	1047129980 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   16964	1019298818 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   19932	1225670349 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   17476	1059722029 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   16647	1017014069 ns
+BenchmarkQPS_CmdStream_TCP_MUSs-16    	   17566	1072461085 ns
+PASS
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	185.554s

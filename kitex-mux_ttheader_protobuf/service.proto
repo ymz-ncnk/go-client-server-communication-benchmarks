@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "echo";
+
+// kitex -module=github.com/ymz-ncnk/go-inter-server-communication-benchmarks
+// service.proto
+
+message KitexData {
+  bool Bool = 1;
+  int64 Int64 = 2;
+  string String = 3;
+  double Float64 = 4;
+}
+
+service KitexEchoService {
+  rpc Echo(KitexData) returns (KitexData) {}
+}

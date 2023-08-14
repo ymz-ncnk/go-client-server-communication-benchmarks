@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmark
+cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  131990	1362043669 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  131068	1338529602 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  131313	1469475173 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  130545	1341035708 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  119020	1349513750 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  118298	1253539026 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  113718	1167661155 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  117625	1331315451 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  113499	1235295735 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	  114459	1195377329 ns
+PASS
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmark	186.238s

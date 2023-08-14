@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmark
+cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1324376777 ns	 544219468 ns/cop	1247900681 ns/max	 544003014 ns/med	  44754044 ns/min	1046559772 ns/p99	  209855 B/op	    2472 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1420389001 ns	 624320357 ns/cop	1347091796 ns/max	 646534219 ns/med	  32221314 ns/min	1179601526 ns/p99	  203802 B/op	    2467 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1396298902 ns	 541824283 ns/cop	1243289743 ns/max	 534605070 ns/med	  31829913 ns/min	1105005012 ns/p99	  199732 B/op	    2450 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1374891646 ns	 481643172 ns/cop	1314391506 ns/max	 451519302 ns/med	  39614400 ns/min	1083985962 ns/p99	  199524 B/op	    2449 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1364941541 ns	 463050963 ns/cop	1294646166 ns/max	 432496032 ns/med	  35000578 ns/min	1155050650 ns/p99	  199263 B/op	    2445 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1440732466 ns	 570797798 ns/cop	1383994646 ns/max	 551734966 ns/med	  33004166 ns/min	1202820696 ns/p99	  201294 B/op	    2454 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1386775743 ns	 536419245 ns/cop	1280460666 ns/max	 550458601 ns/med	  30580468 ns/min	1102034084 ns/p99	  199170 B/op	    2455 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1493673469 ns	 657610029 ns/cop	1380224100 ns/max	 666035262 ns/med	  30407455 ns/min	1219182742 ns/p99	  200691 B/op	    2455 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1393085073 ns	 492292573 ns/cop	1290899162 ns/max	 499776964 ns/med	  35807757 ns/min	1108587586 ns/p99	  199073 B/op	    2449 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1359540556 ns	 462441246 ns/cop	1280817241 ns/max	 435411916 ns/med	  35225798 ns/min	1032600234 ns/p99	  198967 B/op	    2446 allocs/op
+PASS
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmark	33.266s
