@@ -27,16 +27,18 @@ func (server echoServer) Echo(ctx context.Context, data *data_protobuf.Data) (
 }
 
 func StartServer(l net.Listener, wg *sync.WaitGroup) {
-	server := grpc.NewServer(make([]grpc.ServerOption, 0)...)
-	RegisterEchoServiceServer(server, echoServer{})
+	server := MakeServer()
 	go func() {
 		defer wg.Done()
 		server.Serve(l)
 	}()
 }
 
-func NewServer() *grpc.Server {
-	var opts []grpc.ServerOption
+func MakeServer() *grpc.Server {
+	opts := []grpc.ServerOption{
+		grpc.WriteBufferSize(utils.IOBufSize),
+		grpc.ReadBufferSize(utils.IOBufSize),
+	}
 	grpcServer := grpc.NewServer(opts...)
 	RegisterEchoServiceServer(grpcServer, echoServer{})
 	return grpcServer

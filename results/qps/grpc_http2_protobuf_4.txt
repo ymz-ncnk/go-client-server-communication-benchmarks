@@ -1,16 +1,16 @@
 goos: linux
 goarch: amd64
-pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmark
+pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   20614	1164957711 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   21855	1349864674 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22029	1368200848 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   23028	1416565759 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   21495	1280729477 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22515	1375573456 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   23644	1359737541 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   21405	1301281137 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   21627	1321896729 ns
-BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22897	1332106182 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   18096	1000841151 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22204	1263411683 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   23012	1315972913 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   20100	1174539123 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   17629	1022782123 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   21915	1271657489 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22659	1374176355 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   20289	1036023789 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22834	1288896708 ns
+BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   22680	1372996128 ns
 PASS
-ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmark	124.990s
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	146.856s

@@ -8,25 +8,37 @@ import (
 	cs_server "github.com/cmd-stream/cmd-stream-go/server"
 	"github.com/cmd-stream/delegate-go"
 	"github.com/cmd-stream/transport-go"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/muss"
+	transport_common "github.com/cmd-stream/transport-go/common"
+	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
+	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
 )
 
 func StartServer(clientsCount int, l base.Listener, wg *sync.WaitGroup) (
 	server *base_server.Server, err error) {
-	conf := cs_server.Conf{
-		Base: base_server.Conf{WorkersCount: clientsCount},
-	}
-	server = cs_server.New[struct{}](cs_server.DefServerInfo,
-		delegate.ServerSettings{},
-		conf,
-		ServerCodec{},
-		struct{}{},
-		nil)
+	server = MakeServer(clientsCount)
 	go func() {
 		defer wg.Done()
 		server.Serve(l)
 	}()
 	return
+}
+
+func MakeServer(clientsCount int) *base_server.Server {
+	conf := cs_server.Conf{
+		Base: base_server.Conf{
+			WorkersCount: clientsCount,
+		},
+		Transport: transport_common.Conf{
+			WriterBufSize: utils.IOBufSize,
+			ReaderBufSize: utils.IOBufSize,
+		},
+	}
+	return cs_server.New[struct{}](cs_server.DefServerInfo,
+		delegate.ServerSettings{},
+		conf,
+		ServerCodec{},
+		struct{}{},
+		nil)
 }
 
 type ServerCodec struct{}

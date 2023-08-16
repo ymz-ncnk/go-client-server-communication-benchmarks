@@ -6,13 +6,23 @@ import (
 	base "github.com/cmd-stream/base-go"
 	base_client "github.com/cmd-stream/base-go/client"
 	cs_client "github.com/cmd-stream/cmd-stream-go/client"
+	cs_server "github.com/cmd-stream/cmd-stream-go/server"
 	"github.com/cmd-stream/transport-go"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/muss"
+	transport_common "github.com/cmd-stream/transport-go/common"
+	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
+	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
 )
 
 func MakeClient(conn net.Conn) (client *base_client.Client[struct{}],
 	err error) {
-	return cs_client.NewDef[struct{}](ClientCodec{}, conn, nil)
+	conf := cs_client.Conf{
+		Transport: transport_common.Conf{
+			WriterBufSize: utils.IOBufSize,
+			ReaderBufSize: utils.IOBufSize,
+		},
+	}
+	return cs_client.New[struct{}](cs_server.DefServerInfo, conf, ClientCodec{},
+		conn, nil)
 }
 
 type ClientCodec struct{}

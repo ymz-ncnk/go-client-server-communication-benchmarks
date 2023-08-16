@@ -8,7 +8,7 @@ import (
 	base "github.com/cmd-stream/base-go"
 	base_client "github.com/cmd-stream/base-go/client"
 
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/muss"
+	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
 )
 
 func ExchangeQPS(cmd EchoCmd, client *base_client.Client[struct{}],

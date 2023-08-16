@@ -2,15 +2,15 @@ goos: linux
 goarch: amd64
 pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  103940	1355278866 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  100219	1237058773 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  106501	1297215393 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	   95983	1147614505 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  102289	1243216105 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  103310	1243875227 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  101526	1219003849 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  103406	1296325854 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  105398	1252093090 ns
-BenchmarkQPS_CmdStream_TCP_MUSs-16    	  102832	1218586342 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  120350	1392403368 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  127142	1325325806 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  138848	1470262972 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  139484	1482200420 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  142872	1513010468 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  136717	1558828924 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  132207	1432212324 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  138520	1454552587 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  123349	1315611408 ns
+BenchmarkQPS_CmdStream_TCP_MUS-16    	  124864	1303013705 ns
 PASS
-ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	136.340s
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	141.676s

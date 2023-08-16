@@ -1,16 +1,16 @@
 goos: linux
 goarch: amd64
-pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmark
+pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16497	1243229387 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   17598	1275900911 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   17060	1276910565 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16798	1321009856 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16183	1207929530 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16544	1193821647 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16876	1250549262 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16987	1238183888 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16873	1277003410 ns
-BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16650	1203348447 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   17928	1214044148 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16461	1153151799 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16562	1185187832 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   15902	1090193664 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16369	1097039890 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   17244	1220505559 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   17168	1196980295 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   14388	1000494850 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   16263	1130629139 ns
+BenchmarkQPS_Kitex_TTHeader_Protobuf-16    	   15579	1107897381 ns
 PASS
-ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmark	154.243s
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	260.248s

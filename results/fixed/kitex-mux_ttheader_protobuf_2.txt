@@ -1,16 +1,16 @@
 goos: linux
 goarch: amd64
-pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmark
+pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 933931184 ns	 345084993 ns/cop	 685906185 ns/max	 343066034 ns/med	  48775041 ns/min	 586711890 ns/p99	   17332 B/op	     129 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 920898584 ns	 374070941 ns/cop	 827178097 ns/max	 393119338 ns/med	  33825228 ns/min	 644806038 ns/p99	   17902 B/op	     130 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 907503015 ns	 357075525 ns/cop	 655393084 ns/max	 381988926 ns/med	  47493988 ns/min	 629069060 ns/p99	   16874 B/op	     128 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 917091711 ns	 381473226 ns/cop	 693772011 ns/max	 399668148 ns/med	  50098504 ns/min	 642387484 ns/p99	   17884 B/op	     130 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	1027763911 ns	 463404906 ns/cop	 939037394 ns/max	 481089862 ns/med	  48516298 ns/min	 822655712 ns/p99	   18531 B/op	     134 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 964665357 ns	 395732107 ns/cop	 756145580 ns/max	 406285142 ns/med	  48860961 ns/min	 729546692 ns/p99	   16998 B/op	     125 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 962622450 ns	 402961202 ns/cop	 777811611 ns/max	 410009300 ns/med	  45742705 ns/min	 661208905 ns/p99	   17906 B/op	     132 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 954527546 ns	 397720579 ns/cop	 764531668 ns/max	 412898458 ns/med	  30617666 ns/min	 718505543 ns/p99	   18031 B/op	     132 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	1005922753 ns	 396566257 ns/cop	 722827308 ns/max	 409474942 ns/med	  38749319 ns/min	 624261894 ns/p99	   17399 B/op	     129 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 942680471 ns	 368860437 ns/cop	 734317136 ns/max	 385659715 ns/med	  35714879 ns/min	 626034160 ns/p99	   17084 B/op	     128 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 985974874 ns	 399249716 ns/cop	 698321224 ns/max	 412517592 ns/med	  51938566 ns/min	 678300324 ns/p99	   18362 B/op	     131 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 948045809 ns	 385236829 ns/cop	 703275540 ns/max	 403250398 ns/med	  43744967 ns/min	 673782794 ns/p99	   18305 B/op	     130 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 918292281 ns	 378824962 ns/cop	 696759521 ns/max	 386667685 ns/med	  40208217 ns/min	 641674805 ns/p99	   17344 B/op	     130 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 922205850 ns	 355559946 ns/cop	 791198024 ns/max	 372960318 ns/med	  47632590 ns/min	 642530861 ns/p99	   16784 B/op	     128 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 928353101 ns	 383772771 ns/cop	 765403778 ns/max	 370616800 ns/med	  48908871 ns/min	 646791846 ns/p99	   17527 B/op	     132 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 965863590 ns	 357584112 ns/cop	 712213210 ns/max	 382638527 ns/med	  40343675 ns/min	 639452282 ns/p99	   16728 B/op	     128 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 935489012 ns	 377315480 ns/cop	 700867584 ns/max	 395628492 ns/med	  39217708 ns/min	 655283353 ns/p99	   16751 B/op	     127 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 879034212 ns	 327419215 ns/cop	 790571114 ns/max	 327143838 ns/med	  43540014 ns/min	 611395554 ns/p99	   16300 B/op	     124 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 892407894 ns	 365336931 ns/cop	 641725128 ns/max	 382727367 ns/med	  39472529 ns/min	 626498479 ns/p99	   17119 B/op	     129 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	   50000	 918347168 ns	 396803439 ns/cop	 693769881 ns/max	 408167080 ns/med	  42442853 ns/min	 651283450 ns/p99	   17665 B/op	     132 allocs/op
 PASS
-ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmark	69.044s
+ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	67.493s

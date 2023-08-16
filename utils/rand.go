@@ -2,7 +2,7 @@ package utils
 
 import "math/rand"
 
-const MaxStringLength = 1024
+const MaxStringLength = 1007
 
 var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 

@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/cmd-stream/base-go/client"
-	cs "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/cmd-stream_tcp_muss"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/muss"
+	cs "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/cmd-stream_tcp_mus"
+	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
 	data_protobuf "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/protobuf"
 	grpc "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/grpc_http2_protobuf"
 	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf"
@@ -18,7 +18,6 @@ import (
 	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
 )
 
-const GenSize = 200000
 const CopsDChanSize = 5000000
 
 // -----------------------------------------------------------------------------
@@ -50,7 +49,7 @@ func benchmarkGRPC_HTTP2_Protobuf(clientsCount int,
 	var (
 		addr = "127.0.0.1:9003"
 		r    = rand.New(rand.NewSource(time.Now().Unix()))
-		ds   = data_protobuf.GenData(clientsCount, GenSize, r)
+		ds   = data_protobuf.GenData(clientsCount, utils.GenSize(), r)
 		wgS  = &sync.WaitGroup{}
 	)
 	l, err := net.Listen("tcp", addr)
@@ -116,7 +115,7 @@ func benchmarkKitex_TTHeader_Protobuf(clientsCount int,
 	var (
 		addr = "127.0.0.1:9003"
 		r    = rand.New(rand.NewSource(time.Now().Unix()))
-		ds   = kitex.GenData(clientsCount, GenSize, r)
+		ds   = kitex.GenData(clientsCount, utils.GenSize(), r)
 		err  error
 		wgS  = &sync.WaitGroup{}
 	)
@@ -150,14 +149,14 @@ func benchmarkKitex_TTHeader_Protobuf(clientsCount int,
 }
 
 // -----------------------------------------------------------------------------
-func BenchmarkQPS_CmdStream_TCP_MUSs(b *testing.B) {
+func BenchmarkQPS_CmdStream_TCP_MUS(b *testing.B) {
 	clientsCount := utils.ClientsCount()
-	benchmarkCmdStream_TCP_MUSs(clientsCount, cs.ExchangeQPS, b)
+	benchmarkCmdStream_TCP_MUS(clientsCount, cs.ExchangeQPS, b)
 	b.ReportMetric(0, "ns/op")
 	b.ReportMetric(float64(b.Elapsed()), "ns")
 }
 
-func BenchmarkFixed_CmdStream_TCP_MUSs(b *testing.B) {
+func BenchmarkFixed_CmdStream_TCP_MUS(b *testing.B) {
 	var (
 		clientsCount = utils.ClientsCount()
 		copsD        = make(chan time.Duration, CopsDChanSize)
@@ -168,18 +167,18 @@ func BenchmarkFixed_CmdStream_TCP_MUSs(b *testing.B) {
 			cs.ExchangeFixed(cmd, client, copsD, wg, b)
 		}
 	)
-	benchmarkCmdStream_TCP_MUSs(clientsCount, exchangeFn, b)
+	benchmarkCmdStream_TCP_MUS(clientsCount, exchangeFn, b)
 	utils.ReportMetrics(clientsCount, copsD, b)
 }
 
-func benchmarkCmdStream_TCP_MUSs(clientsCount int,
+func benchmarkCmdStream_TCP_MUS(clientsCount int,
 	exchangFn func(cmd cs.EchoCmd, client *client.Client[struct{}], wg *sync.WaitGroup, b *testing.B),
 	b *testing.B,
 ) {
 	var (
 		addr = "127.0.0.1:9010"
 		r    = rand.New(rand.NewSource(time.Now().Unix()))
-		ds   = data_mus.GenData(clientsCount, GenSize, r)
+		ds   = data_mus.GenData(clientsCount, utils.GenSize(), r)
 		wgS  = &sync.WaitGroup{}
 	)
 	listener, err := net.Listen("tcp", addr)

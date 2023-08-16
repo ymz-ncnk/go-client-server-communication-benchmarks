@@ -7,7 +7,7 @@ In this benchmarks 1,2,4,8,16 clients send echo requests to the server as
 follows:
 - Each client uses only one connection and executes all echo requests
   simultaneously in separate goroutines.
-- Size of the data varies from 10 to 1024 bytes.
+- Size of the data varies from 17 to 1024 bytes.
 - The size of the read and write buffers is limited to 4096 bytes.
 - The delay of each response on the server is 30 ms.
 - The received data is checked - it must match the sent data.
@@ -21,10 +21,10 @@ charger and fan running at full speed):
 
 with the following commands:
 ```
-CLIENTS_COUNT=n go test -bench=BenchmarkQPS_... -count=10
-CLIENTS_COUNT=n go test -bench=BenchmarkFixed_... -benchtime=(100000/n)x -benchmem -count=10
+CLIENTS_COUNT=n GEN_SIZE=m go test -bench=BenchmarkQPS_... -count=10
+CLIENTS_COUNT=n GEN_SIZE=m go test -bench=BenchmarkFixed_... -benchtime=(100000/n)x -benchmem -count=10
 ```
-, where `n` is the number of clients.
+, where `n` - the number of clients, `m` - the number of generated test data.
 
 
 ![image](results/qps/img/qps.png)
