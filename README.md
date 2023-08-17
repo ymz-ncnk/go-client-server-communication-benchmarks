@@ -1,6 +1,6 @@
 # go-client-server-communication-benchmarks
-This project compares the performance of several Golang libraries/frameworks for
-client-server communication.
+This project compares the performance of several client-server communication
+libraries/frameworks for Golang.
 
 # Short Benchmarks Description
 In this benchmarks 1,2,4,8,16 clients send echo requests to the server as
