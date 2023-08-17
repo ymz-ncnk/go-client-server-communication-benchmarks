@@ -13,7 +13,7 @@ follows:
 - The received data is checked - it must match the sent data.
 
 # Results
-All [results](result) were obtained on a single laptop (with the connected 
+All [results](results) were obtained on a single laptop (with the connected 
 charger and fan running at full speed):
 - CPU: AMD Ryzen 7 PRO 5850U with Radeon Graphics
 - OS: Gentoo 5.19.9-gentoo x86_64 GNU/Linux
