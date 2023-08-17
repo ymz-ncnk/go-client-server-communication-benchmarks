@@ -1,6 +1,6 @@
 goos: linux
 goarch: amd64
-pkg: github.com/ymz-ncnk/go-inter-server-communication-benchmarks
+pkg: github.com/ymz-ncnk/go-client-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
 BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   57080	1397317790 ns
 BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   54649	1349901426 ns
@@ -13,4 +13,4 @@ BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   61765	1360937415 ns
 BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   58494	1225460349 ns
 BenchmarkQPS_GRPC_HTTP2_Protobuf-16    	   49568	1068716930 ns
 PASS
-ok  	github.com/ymz-ncnk/go-inter-server-communication-benchmarks	104.275s
+ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	104.275s

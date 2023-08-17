@@ -5,8 +5,8 @@ import (
 	"time"
 
 	base "github.com/cmd-stream/base-go"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	data_mus "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/mus"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 type EchoCmd data_mus.Data

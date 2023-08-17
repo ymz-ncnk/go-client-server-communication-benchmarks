@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	data_protobuf "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/protobuf"
+	data_protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
 )
 
 func ExchangeFixed(data *data_protobuf.Data, client EchoServiceClient,

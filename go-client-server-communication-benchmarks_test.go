@@ -1,4 +1,4 @@
-package giscb
+package gcscb
 
 import (
 	"math/rand"
@@ -8,14 +8,14 @@ import (
 	"time"
 
 	"github.com/cmd-stream/base-go/client"
-	cs "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/cmd-stream_tcp_mus"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
-	data_protobuf "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/protobuf"
-	grpc "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/grpc_http2_protobuf"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	cs "github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd-stream_tcp_mus"
+	data_mus "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/mus"
+	data_protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
+	grpc "github.com/ymz-ncnk/go-client-server-communication-benchmarks/grpc_http2_protobuf"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 const CopsDChanSize = 5000000

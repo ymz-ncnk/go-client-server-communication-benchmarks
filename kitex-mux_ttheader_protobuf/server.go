@@ -11,9 +11,9 @@ import (
 	"github.com/cloudwego/kitex/pkg/transmeta"
 	kitex_utils "github.com/cloudwego/kitex/pkg/utils"
 	server "github.com/cloudwego/kitex/server"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func init() {

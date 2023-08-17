@@ -3,7 +3,7 @@ package kitexechoservice
 
 import (
 	server "github.com/cloudwego/kitex/server"
-	echo "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
+	echo "github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
 )
 
 // NewServer creates a server.Server with the given handler and options.

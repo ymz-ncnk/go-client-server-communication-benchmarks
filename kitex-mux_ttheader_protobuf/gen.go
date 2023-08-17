@@ -3,8 +3,8 @@ package kitex
 import (
 	"math/rand"
 
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func GenData(clientsCount, size int, r *rand.Rand) (arr [][]*echo.KitexData) {

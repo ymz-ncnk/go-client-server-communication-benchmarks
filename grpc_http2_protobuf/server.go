@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	data_protobuf "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/protobuf"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	data_protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 	grpc "google.golang.org/grpc"
 )
 

@@ -5,8 +5,8 @@ import (
 	"github.com/cloudwego/kitex/pkg/rpcinfo"
 	"github.com/cloudwego/kitex/pkg/transmeta"
 	kitex_utils "github.com/cloudwego/kitex/pkg/utils"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func WithClientIOBufferSize() client.Option {

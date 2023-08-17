@@ -4,7 +4,7 @@ package kitexechoservice
 
 import (
 	server "github.com/cloudwego/kitex/server"
-	echo "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
+	echo "github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
 )
 
 // NewInvoker creates a server.Invoker with the given handler and options.

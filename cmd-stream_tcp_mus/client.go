@@ -9,8 +9,8 @@ import (
 	cs_server "github.com/cmd-stream/cmd-stream-go/server"
 	"github.com/cmd-stream/transport-go"
 	transport_common "github.com/cmd-stream/transport-go/common"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	data_mus "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/mus"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func MakeClient(conn net.Conn) (client *base_client.Client[struct{}],

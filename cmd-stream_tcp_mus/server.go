@@ -9,8 +9,8 @@ import (
 	"github.com/cmd-stream/delegate-go"
 	"github.com/cmd-stream/transport-go"
 	transport_common "github.com/cmd-stream/transport-go/common"
-	data_mus "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/mus"
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	data_mus "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/mus"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func StartServer(clientsCount int, l base.Listener, wg *sync.WaitGroup) (

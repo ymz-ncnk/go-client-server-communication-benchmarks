@@ -1,4 +1,4 @@
-module github.com/ymz-ncnk/go-inter-server-communication-benchmarks
+module github.com/ymz-ncnk/go-client-server-communication-benchmarks
 
 go 1.20
 

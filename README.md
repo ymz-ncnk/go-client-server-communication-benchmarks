@@ -1,6 +1,6 @@
-# go-inter-server-communication-benchmarks
+# go-client-server-communication-benchmarks
 This project compares the performance of several Golang libraries/frameworks for
-inter-server communication.
+client-server communication.
 
 # Short Benchmarks Description
 In this benchmarks 1,2,4,8,16 clients send echo requests to the server as

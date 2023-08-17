@@ -3,7 +3,7 @@ package protobuf
 import (
 	"math/rand"
 
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func GenData(clientsCount, size int, r *rand.Rand) (arr [][]*Data) {

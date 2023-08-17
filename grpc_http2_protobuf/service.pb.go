@@ -7,7 +7,7 @@
 package grpc
 
 import (
-	protobuf "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/protobuf"
+	protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

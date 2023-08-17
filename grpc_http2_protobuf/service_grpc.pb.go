@@ -8,7 +8,7 @@ package grpc
 
 import (
 	context "context"
-	protobuf "github.com/ymz-ncnk/go-inter-server-communication-benchmarks/data/protobuf"
+	protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

@@ -1,7 +1,7 @@
 package grpc
 
 import (
-	"github.com/ymz-ncnk/go-inter-server-communication-benchmarks/utils"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 	grpc "google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
