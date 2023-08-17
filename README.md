@@ -37,7 +37,7 @@ CLIENTS_COUNT=n GEN_SIZE=m go test -bench=BenchmarkFixed_... -benchtime=(100000/
 To get more comparable results, let's check how well all participants can 
 handle 100,000 simultaneous requests:
 
-![image](results/fixed/img/ns.png)
+![image](results/fixed/img/sec.png)
 ![image](results/fixed/img/cop.png)
 ![image](results/fixed/img/max.png)
 ![image](results/fixed/img/med.png)
