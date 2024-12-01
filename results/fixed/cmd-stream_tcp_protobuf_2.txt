@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: github.com/ymz-ncnk/go-client-server-communication-benchmarks
+cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 837385766 ns	 419889682 ns/cop	 800458089 ns/max	 460258607 ns/med	  32067407 ns/min	 743627966 ns/p99	    8997 B/op	      31 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 824068077 ns	 403473411 ns/cop	 793916404 ns/max	 435335629 ns/med	  30215813 ns/min	 707455139 ns/p99	    8065 B/op	      29 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 882280689 ns	 499304923 ns/cop	 860360861 ns/max	 571932436 ns/med	  31435712 ns/min	 789459576 ns/p99	    8057 B/op	      30 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 903319831 ns	 533071341 ns/cop	 891927917 ns/max	 584509803 ns/med	  34720154 ns/min	 815783530 ns/p99	    8151 B/op	      30 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 854543232 ns	 458832194 ns/cop	 832918759 ns/max	 504539476 ns/med	  32948460 ns/min	 750698637 ns/p99	    8045 B/op	      29 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 820016369 ns	 430577142 ns/cop	 813651777 ns/max	 479127742 ns/med	  31969353 ns/min	 709506343 ns/p99	    8055 B/op	      30 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 798101340 ns	 394726648 ns/cop	 741153581 ns/max	 428896799 ns/med	  30724036 ns/min	 684824342 ns/p99	    8053 B/op	      29 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 786859254 ns	 411353232 ns/cop	 763974267 ns/max	 439028462 ns/med	  34162037 ns/min	 705869272 ns/p99	    8044 B/op	      29 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 817417168 ns	 423366477 ns/cop	 806132585 ns/max	 472381917 ns/med	  39465638 ns/min	 727555199 ns/p99	    8070 B/op	      30 allocs/op
+BenchmarkFixed_CmdStream_TCP_Protobuf-16    	   50000	 829555021 ns	 421851133 ns/cop	 801104019 ns/max	 473375756 ns/med	  40970952 ns/min	 718652914 ns/p99	    8050 B/op	      29 allocs/op
+PASS
+ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	32.813s

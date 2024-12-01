@@ -2,15 +2,15 @@ goos: linux
 goarch: amd64
 pkg: github.com/ymz-ncnk/go-client-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 512151716 ns	 242032651 ns/cop	 481079043 ns/max	 280955198 ns/med	  30093541 ns/min	 432780606 ns/p99	    4477 B/op	      27 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 524519450 ns	 261912913 ns/cop	 512394935 ns/max	 311545722 ns/med	  30097719 ns/min	 457582886 ns/p99	    3798 B/op	      26 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 487419177 ns	 200490631 ns/cop	 472126823 ns/max	 207853432 ns/med	  30106425 ns/min	 420937955 ns/p99	    3616 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 448413658 ns	 200529742 ns/cop	 434745573 ns/max	 222314272 ns/med	  30093000 ns/min	 389591070 ns/p99	    3620 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 469050129 ns	 202906560 ns/cop	 452876624 ns/max	 212481648 ns/med	  31171078 ns/min	 407298122 ns/p99	    3618 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 469588100 ns	 208179004 ns/cop	 447368768 ns/max	 218245118 ns/med	  30084354 ns/min	 404765676 ns/p99	    3633 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 479231835 ns	 228956600 ns/cop	 473762217 ns/max	 248165276 ns/med	  30173581 ns/min	 416190525 ns/p99	    3655 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 528885605 ns	 245093678 ns/cop	 511446922 ns/max	 269168619 ns/med	  30083844 ns/min	 471275942 ns/p99	    3639 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 500720547 ns	 235107177 ns/cop	 473416386 ns/max	 250667744 ns/med	  30125962 ns/min	 439343932 ns/p99	    3671 B/op	      25 allocs/op
-BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 482806999 ns	 224941966 ns/cop	 466991824 ns/max	 254269629 ns/med	  31285955 ns/min	 422740460 ns/p99	    3669 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 725153616 ns	 316218598 ns/cop	 679550646 ns/max	 357939848 ns/med	  30147622 ns/min	 610198358 ns/p99	    4592 B/op	      27 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 751259254 ns	 386801095 ns/cop	 725301813 ns/max	 425087880 ns/med	  30207946 ns/min	 662158574 ns/p99	    3810 B/op	      26 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 725653491 ns	 371540435 ns/cop	 700396504 ns/max	 415102049 ns/med	  30181877 ns/min	 628050340 ns/p99	    3730 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 723420801 ns	 352392693 ns/cop	 687434184 ns/max	 383883582 ns/med	  30166458 ns/min	 619068648 ns/p99	    3714 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 745206815 ns	 379607978 ns/cop	 722578179 ns/max	 426673632 ns/med	  33537773 ns/min	 652352673 ns/p99	    3735 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 721449230 ns	 366834846 ns/cop	 685408881 ns/max	 400521807 ns/med	  32937166 ns/min	 626217553 ns/p99	    3711 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 770371707 ns	 408643683 ns/cop	 716775260 ns/max	 439150030 ns/med	  36433747 ns/min	 666792974 ns/p99	    3792 B/op	      26 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 676606555 ns	 308465327 ns/cop	 648940319 ns/max	 328550966 ns/med	  30158392 ns/min	 591290572 ns/p99	    3718 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 705168030 ns	 332116351 ns/cop	 696777358 ns/max	 373160706 ns/med	  33868464 ns/min	 608366668 ns/p99	    3728 B/op	      25 allocs/op
+BenchmarkFixed_CmdStream_TCP_MUS-16    	   50000	 700258367 ns	 314820475 ns/cop	 654282038 ns/max	 339743223 ns/med	  30120441 ns/min	 583369258 ns/p99	    3720 B/op	      25 allocs/op
 PASS
-ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	22.078s
+ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	31.387s

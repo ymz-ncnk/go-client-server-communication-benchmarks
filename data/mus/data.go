@@ -24,7 +24,7 @@ func MarshalDataMUS(d Data, w muss.Writer) (n int, err error) {
 	if err != nil {
 		return
 	}
-	_, err = unsafe.MarshalString(d.String, w)
+	_, err = unsafe.MarshalString(d.String, nil, w)
 	if err != nil {
 		return
 	}
@@ -41,7 +41,7 @@ func UnmarshalDataMUS(r muss.Reader) (d Data, n int, err error) {
 	if err != nil {
 		return
 	}
-	d.String, _, err = unsafe.UnmarshalString(r)
+	d.String, _, err = unsafe.UnmarshalString(nil, r)
 	if err != nil {
 		return
 	}
@@ -52,6 +52,6 @@ func UnmarshalDataMUS(r muss.Reader) (d Data, n int, err error) {
 func SizeDataMUS(d Data) (size int) {
 	size += ord.SizeBool(d.Bool)
 	size += varint.SizeInt64(d.Int64)
-	size += unsafe.SizeString(d.String)
+	size += unsafe.SizeString(d.String, nil)
 	return size + raw.SizeFloat64(d.Float64)
 }

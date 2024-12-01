@@ -2,15 +2,15 @@ goos: linux
 goarch: amd64
 pkg: github.com/ymz-ncnk/go-client-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 861768110 ns	 254509789 ns/cop	 723544607 ns/max	 237641346 ns/med	  32207781 ns/min	 626242039 ns/p99	  121942 B/op	     954 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 988864926 ns	 382595418 ns/cop	 738687054 ns/max	 395843175 ns/med	  57509160 ns/min	 703920724 ns/p99	  128769 B/op	    1003 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 875999038 ns	 316547467 ns/cop	 653355010 ns/max	 304114296 ns/med	  44646100 ns/min	 578218396 ns/p99	  123081 B/op	     993 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 951748651 ns	 309101219 ns/cop	 642359128 ns/max	 312284224 ns/med	  34222321 ns/min	 613454230 ns/p99	  124574 B/op	     990 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 922668606 ns	 320767507 ns/cop	 799722995 ns/max	 303319909 ns/med	  43739522 ns/min	 708074700 ns/p99	  126632 B/op	     991 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1012318943 ns	 364482892 ns/cop	 908865620 ns/max	 366231528 ns/med	  37649307 ns/min	 772068034 ns/p99	  126011 B/op	     999 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 882858883 ns	 324264223 ns/cop	 690860748 ns/max	 319098376 ns/med	  36315688 ns/min	 628732280 ns/p99	  125113 B/op	     992 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 960179619 ns	 319239552 ns/cop	 719349104 ns/max	 334522384 ns/med	  35197002 ns/min	 658034120 ns/p99	  125310 B/op	     988 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 888984659 ns	 312146495 ns/cop	 647191863 ns/max	 316893617 ns/med	  38536914 ns/min	 583497205 ns/p99	  128541 B/op	     998 allocs/op
-BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	 976188878 ns	 340823104 ns/cop	 888140993 ns/max	 350738396 ns/med	  36668473 ns/min	 759908478 ns/p99	  127162 B/op	     991 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1173300765 ns	 449666431 ns/cop	1060285801 ns/max	 458614575 ns/med	  33124924 ns/min	 919678372 ns/p99	  151286 B/op	    1176 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1158264026 ns	 359658286 ns/cop	 841670455 ns/max	 365283590 ns/med	  39316521 ns/min	 767230416 ns/p99	  127748 B/op	    1092 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1093039311 ns	 339952403 ns/cop	 770089243 ns/max	 328790516 ns/med	  40024519 ns/min	 692049912 ns/p99	  133398 B/op	    1120 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1047391729 ns	 358891734 ns/cop	 761792524 ns/max	 353567368 ns/med	  45771903 ns/min	 707931744 ns/p99	  131599 B/op	    1116 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1134995638 ns	 343871326 ns/cop	 807277075 ns/max	 347496067 ns/med	  46510158 ns/min	 698204690 ns/p99	  125546 B/op	    1080 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1056420653 ns	 337381474 ns/cop	 657876812 ns/max	 332144310 ns/med	  43852200 ns/min	 620081730 ns/p99	  131145 B/op	    1113 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1189126086 ns	 397250035 ns/cop	 889934370 ns/max	 416626058 ns/med	  50906446 ns/min	 816863602 ns/p99	  132340 B/op	    1117 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1085166753 ns	 417935730 ns/cop	 890767150 ns/max	 408075328 ns/med	  36166268 ns/min	 758060598 ns/p99	  138521 B/op	    1146 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1159221539 ns	 385546717 ns/cop	 842781251 ns/max	 394816614 ns/med	  47563674 ns/min	 716485398 ns/p99	  128088 B/op	    1102 allocs/op
+BenchmarkFixed_Kitex_TTHeader_Protobuf-16    	    6250	1068941833 ns	 376218281 ns/cop	 771516625 ns/max	 376986318 ns/med	  46006341 ns/min	 720414307 ns/p99	  134815 B/op	    1132 allocs/op
 PASS
-ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	68.521s
+ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	57.334s

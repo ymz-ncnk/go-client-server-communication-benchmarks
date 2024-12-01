@@ -2,15 +2,15 @@ goos: linux
 goarch: amd64
 pkg: github.com/ymz-ncnk/go-client-server-communication-benchmarks
 cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1371888742 ns	 567770454 ns/cop	1299707655 ns/max	 544952253 ns/med	  37621644 ns/min	1092432466 ns/p99	  209015 B/op	    2475 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1392682956 ns	 606264146 ns/cop	1339161141 ns/max	 576505467 ns/med	  33589920 ns/min	1201770294 ns/p99	  199595 B/op	    2455 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1417770373 ns	 564946713 ns/cop	1321089674 ns/max	 616722681 ns/med	  32472249 ns/min	1099925131 ns/p99	  199231 B/op	    2457 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1405809019 ns	 439263088 ns/cop	1268899224 ns/max	 394564228 ns/med	  39845705 ns/min	1118784171 ns/p99	  197221 B/op	    2447 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1334677018 ns	 442651433 ns/cop	1243132877 ns/max	 405858885 ns/med	  39146488 ns/min	1020788386 ns/p99	  198441 B/op	    2447 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1379545267 ns	 508440844 ns/cop	1304852046 ns/max	 495046572 ns/med	  35019817 ns/min	1130582526 ns/p99	  198162 B/op	    2448 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1397381487 ns	 547448488 ns/cop	1307746417 ns/max	 578764308 ns/med	  46696206 ns/min	1149273338 ns/p99	  198413 B/op	    2454 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1438810463 ns	 639488693 ns/cop	1355075652 ns/max	 661359068 ns/med	  66191936 ns/min	1236529818 ns/p99	  201407 B/op	    2459 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1433283788 ns	 630455022 ns/cop	1363744538 ns/max	 665051870 ns/med	  50223426 ns/min	1176679872 ns/p99	  201111 B/op	    2467 allocs/op
-BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1396460102 ns	 487469153 ns/cop	1298762051 ns/max	 468644768 ns/med	  46392079 ns/min	1066686348 ns/p99	  198297 B/op	    2451 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1557721259 ns	 456498008 ns/cop	1488220654 ns/max	 399059008 ns/med	  39704537 ns/min	1281767260 ns/p99	  214695 B/op	    2779 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1565989547 ns	 525990035 ns/cop	1369523901 ns/max	 510479105 ns/med	  34892008 ns/min	1193138918 ns/p99	  210644 B/op	    2772 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1531407846 ns	 564632511 ns/cop	1322100269 ns/max	 646803598 ns/med	  34959415 ns/min	1225326358 ns/p99	  209534 B/op	    2767 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1522140416 ns	 459742964 ns/cop	1334568446 ns/max	 426591086 ns/med	  43418684 ns/min	1126288688 ns/p99	  209093 B/op	    2768 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1698722033 ns	 772342042 ns/cop	1637489920 ns/max	 786665918 ns/med	  49719775 ns/min	1397602726 ns/p99	  214129 B/op	    2787 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1623655081 ns	 570568475 ns/cop	1534304827 ns/max	 554276790 ns/med	  30820440 ns/min	1265750470 ns/p99	  209523 B/op	    2770 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1578901428 ns	 563490448 ns/cop	1437901579 ns/max	 538622826 ns/med	  79208006 ns/min	1165374308 ns/p99	  210233 B/op	    2774 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1497964203 ns	 513284726 ns/cop	1327239461 ns/max	 469081244 ns/med	  36530813 ns/min	1190204241 ns/p99	  209250 B/op	    2768 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1580098143 ns	 609615846 ns/cop	1441861901 ns/max	 617895274 ns/med	  39422517 ns/min	1290100138 ns/p99	  209767 B/op	    2769 allocs/op
+BenchmarkFixed_GRPC_HTTP2_Protobuf-16    	    6250	1551842802 ns	 584756660 ns/cop	1466023865 ns/max	 573998422 ns/med	  50082054 ns/min	1253302648 ns/p99	  210031 B/op	    2774 allocs/op
 PASS
-ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	32.057s
+ok  	github.com/ymz-ncnk/go-client-server-communication-benchmarks	41.070s
