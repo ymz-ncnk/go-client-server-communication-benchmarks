@@ -248,6 +248,8 @@ func benchmarkCmdStream_TCP_Protobuf(clientsCount int,
 	exchangFn func(cmd csp.EchoCmd, client *client.Client[struct{}], wg *sync.WaitGroup, b *testing.B),
 	b *testing.B,
 ) {
+	// If you are looking for an example of using cmd-stream/Protobuf also have a
+	// look at https://github.com/cmd-stream/cmd-stream-examples-go/tree/main/standard_protobuf.
 	var (
 		addr = "127.0.0.1:9004"
 		r    = rand.New(rand.NewSource(time.Now().Unix()))
