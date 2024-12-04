@@ -8,6 +8,7 @@ import (
 
 	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo"
 	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/kitex-mux_ttheader_protobuf/kitex_gen/echo/kitexechoservice"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func ExchangeFixed(data *echo.KitexData, client kitexechoservice.Client,
@@ -21,7 +22,7 @@ func ExchangeFixed(data *echo.KitexData, client kitexechoservice.Client,
 	if err != nil {
 		b.Error(err)
 	}
-	queueCopD(copsD, time.Since(start))
+	utils.QueueCopD(copsD, time.Since(start))
 	if !EqualData(data, r) {
 		b.Error("unexpected result")
 	}
@@ -44,12 +45,4 @@ func ExchangeQPS(data *echo.KitexData, client kitexechoservice.Client,
 func exchange(data *echo.KitexData, client kitexechoservice.Client,
 ) (r *echo.KitexData, err error) {
 	return client.Echo(context.Background(), data)
-}
-
-func queueCopD(copsD chan<- time.Duration, spent time.Duration) {
-	select {
-	case copsD <- spent:
-	default:
-		panic("you should make the copsD channel bigger")
-	}
 }

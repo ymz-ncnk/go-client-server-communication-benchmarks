@@ -1,4 +1,4 @@
-package cstcpb
+package cstm
 
 import (
 	"sync"
@@ -9,6 +9,7 @@ import (
 	base_client "github.com/cmd-stream/base-go/client"
 
 	data_mus "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/mus"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func ExchangeQPS(cmd EchoCmd, client *base_client.Client[struct{}],
@@ -38,14 +39,14 @@ func ExchangeFixed(cmd EchoCmd, client *base_client.Client[struct{}],
 		b.Error(err)
 		return
 	}
-	queueCopD(copsD, time.Since(start))
+	utils.QueueCopD(copsD, time.Since(start))
 	if !data_mus.EqualData(data_mus.Data(cmd), data_mus.Data(r.Result.(EchoCmd))) {
 		b.Error("unexpected result")
 	}
 }
 
-func exchange(cmd EchoCmd,
-	client *base_client.Client[struct{}]) (r base.AsyncResult, err error) {
+func exchange(cmd EchoCmd, client *base_client.Client[struct{}]) (
+	r base.AsyncResult, err error) {
 	results := make(chan base.AsyncResult, 1)
 	_, err = client.Send(cmd, results)
 	if err != nil {
@@ -57,12 +58,4 @@ func exchange(cmd EchoCmd,
 		return
 	}
 	return
-}
-
-func queueCopD(copsD chan<- time.Duration, spent time.Duration) {
-	select {
-	case copsD <- spent:
-	default:
-		panic("you should make the copsD channel bigger")
-	}
 }

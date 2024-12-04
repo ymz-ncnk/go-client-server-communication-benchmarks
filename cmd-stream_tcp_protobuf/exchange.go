@@ -1,4 +1,4 @@
-package cstcpb
+package csp
 
 import (
 	"sync"
@@ -9,6 +9,7 @@ import (
 	base_client "github.com/cmd-stream/base-go/client"
 
 	data_protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func ExchangeQPS(cmd EchoCmd, client *base_client.Client[struct{}],
@@ -38,7 +39,7 @@ func ExchangeFixed(cmd EchoCmd, client *base_client.Client[struct{}],
 		b.Error(err)
 		return
 	}
-	queueCopD(copsD, time.Since(start))
+	utils.QueueCopD(copsD, time.Since(start))
 	if !data_protobuf.EqualData(cmd.Data, r.Result.(EchoCmd).Data) {
 		b.Error("unexpected result")
 	}
@@ -57,12 +58,4 @@ func exchange(cmd EchoCmd,
 		return
 	}
 	return
-}
-
-func queueCopD(copsD chan<- time.Duration, spent time.Duration) {
-	select {
-	case copsD <- spent:
-	default:
-		panic("you should make the copsD channel bigger")
-	}
 }

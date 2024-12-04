@@ -7,6 +7,7 @@ import (
 	"time"
 
 	data_protobuf "github.com/ymz-ncnk/go-client-server-communication-benchmarks/data/protobuf"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/utils"
 )
 
 func ExchangeFixed(data *data_protobuf.Data, client EchoServiceClient,
@@ -21,7 +22,7 @@ func ExchangeFixed(data *data_protobuf.Data, client EchoServiceClient,
 		b.Error(err)
 		return
 	}
-	queueCopD(copsD, time.Since(start))
+	utils.QueueCopD(copsD, time.Since(start))
 	if !data_protobuf.EqualData(data, r) {
 		b.Error("unexpected result")
 	}
@@ -45,12 +46,4 @@ func ExchangeQPS(data *data_protobuf.Data, client EchoServiceClient,
 func exchange(data *data_protobuf.Data, client EchoServiceClient,
 ) (r *data_protobuf.Data, err error) {
 	return client.Echo(context.Background(), data)
-}
-
-func queueCopD(copsD chan<- time.Duration, spent time.Duration) {
-	select {
-	case copsD <- spent:
-	default:
-		panic("you should make the copsD channel bigger")
-	}
 }

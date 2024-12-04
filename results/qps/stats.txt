@@ -1,30 +1,53 @@
 Obtained using benchstat.
 
-// QPS -------------------------------------------------------------------------
-cmd-stream_tcp_mus
-1  - 162900 1.215 sec				162900 / 1.215 = 134074.074074
-2  - 215200 1.199 sec											 = 179482.902419
-4  - 293120 1.240 sec											 = 236387.096774
-8  - 333440 1.165 set                      = 286214.592275
-16 - 323680 1.149 sec                      = 281705.831158
+goos: linux
+goarch: amd64
+pkg: github.com/ymz-ncnk/go-client-server-communication-benchmarks
+cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
+                                  │ results/qps/benchmarks.txt │
+                                  │            sec             │
+QPS/1/grpc_http2_protobuf-16                       1.242 ±  2%
+QPS/1/kitex_ttheader_protobuf-16                   1.380 ±  2%
+QPS/1/cmd-stream_tcp_mus-16                        1.193 ±  4%
+QPS/1/cmd-stream_tcp_protobuf-16                   1.129 ±  3%
+QPS/2/grpc_http2_protobuf-16                       1.178 ±  4%
+QPS/2/kitex_ttheader_protobuf-16                   1.244 ±  4%
+QPS/2/cmd-stream_tcp_mus-16                        1.288 ±  2%
+QPS/2/cmd-stream_tcp_protobuf-16                   1.219 ±  2%
+QPS/4/grpc_http2_protobuf-16                       1.036 ± 12%
+QPS/4/kitex_ttheader_protobuf-16                   1.171 ±  3%
+QPS/4/cmd-stream_tcp_mus-16                        1.279 ±  6%
+QPS/4/cmd-stream_tcp_protobuf-16                   1.247 ±  2%
+QPS/8/grpc_http2_protobuf-16                       1.298 ±  3%
+QPS/8/kitex_ttheader_protobuf-16                   1.110 ±  3%
+QPS/8/cmd-stream_tcp_mus-16                        1.194 ±  1%
+QPS/8/cmd-stream_tcp_protobuf-16                   1.182 ± 15%
+QPS/16/grpc_http2_protobuf-16                      1.173 ±  3%
+QPS/16/kitex_ttheader_protobuf-16                  1.238 ±  7%
+QPS/16/cmd-stream_tcp_mus-16                       1.016 ± 18%
+QPS/16/cmd-stream_tcp_protobuf-16                  1.037 ±  6%
+geomean                                            1.189
 
-cmd-stream_tcp_protobuf
-1  - 139600 1.184 sec                      = 117905.405405
-2  - 195320 1.265 sec                      = 154403.162055
-4  - 247080 1.284 sec                      = 192429.906542
-8  - 272320 1.184 sec                      = 230000
-16 - 264160 1.153 sec                      = 229106.678231
-
-grpc_http2_protobuf
-1  - 57900 1.275 sec                       = 45411.7647059
-2  - 72420 1.262 sec                       = 57385.1030111
-4  - 88400 1.371 sec											 = 64478.4828592
-8  - 102240 1.437 sec                      = 71148.2254697
-16 - 87840 1.255 sec                       = 69992.0318725
-
-kitex-mux_ttheader_protobuf
-1  - 116700 1.321 sec                      = 88342.1650265
-2  - 119160 1.202 sec                      = 99134.7753744
-4  - 109080 1.085 sec                      = 100534.562212
-8  - 114960 1.142 sec                      = 100665.499124
-16 - 133808 1.260 sec                      = 106196.825397
+                                  │ results/qps/benchmarks.txt │
+                                  │             it             │
+QPS/1/grpc_http2_protobuf-16                      67.75k ±  1%
+QPS/1/kitex_ttheader_protobuf-16                  167.5k ±  1%
+QPS/1/cmd-stream_tcp_mus-16                       195.8k ±  2%
+QPS/1/cmd-stream_tcp_protobuf-16                  163.6k ±  1%
+QPS/2/grpc_http2_protobuf-16                      47.08k ±  2%
+QPS/2/kitex_ttheader_protobuf-16                  81.80k ±  2%
+QPS/2/cmd-stream_tcp_mus-16                       143.2k ±  2%
+QPS/2/cmd-stream_tcp_protobuf-16                  121.7k ±  1%
+QPS/4/grpc_http2_protobuf-16                      23.02k ± 16%
+QPS/4/kitex_ttheader_protobuf-16                  40.51k ±  1%
+QPS/4/cmd-stream_tcp_mus-16                       94.21k ±  3%
+QPS/4/cmd-stream_tcp_protobuf-16                  80.33k ±  2%
+QPS/8/grpc_http2_protobuf-16                      14.49k ±  2%
+QPS/8/kitex_ttheader_protobuf-16                  18.31k ±  4%
+QPS/8/cmd-stream_tcp_mus-16                       48.95k ±  1%
+QPS/8/cmd-stream_tcp_protobuf-16                  41.72k ± 17%
+QPS/16/grpc_http2_protobuf-16                     6.923k ±  1%
+QPS/16/kitex_ttheader_protobuf-16                 10.08k ±  4%
+QPS/16/cmd-stream_tcp_mus-16                      20.79k ± 17%
+QPS/16/cmd-stream_tcp_protobuf-16                 18.39k ±  5%
+geomean                                           46.75k

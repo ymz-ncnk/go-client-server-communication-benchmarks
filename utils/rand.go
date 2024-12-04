@@ -1,34 +1,15 @@
 package utils
 
-import "math/rand"
+import (
+	"math/rand"
+)
 
-const MaxStringLength = 1007
+const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
-var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-
-func RandomBool(r *rand.Rand) bool {
-	return r.Intn(2) == 1
-}
-
-func RandomInt64(r *rand.Rand) int64 {
-	return r.Int63()
-}
-
-func RandomInt(r *rand.Rand) int {
-	return r.Int()
-}
-
-func RandomString(r *rand.Rand) string {
-	var (
-		length = r.Intn(MaxStringLength)
-		b      = make([]rune, length)
-	)
+func RandomString() (s string) {
+	b := make([]byte, rand.Intn(MaxStringLength))
 	for i := range b {
-		b[i] = letters[r.Intn(len(letters))]
+		b[i] = charset[rand.Intn(len(charset))]
 	}
 	return string(b)
-}
-
-func RandomFloat64(r *rand.Rand) float64 {
-	return r.NormFloat64()
 }

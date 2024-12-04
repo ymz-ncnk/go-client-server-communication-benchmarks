@@ -5,6 +5,7 @@ go 1.22.7
 toolchain go1.23.3
 
 require (
+	github.com/brianvoe/gofakeit v3.18.0+incompatible
 	github.com/cloudwego/fastpb v0.0.5
 	github.com/cloudwego/kitex v0.11.3
 	github.com/cmd-stream/base-go v0.0.0-20241126232756-979c1388a1d8
