@@ -1,0 +1,13 @@
+syntax = "proto3";
+package common;
+
+option go_package = "github.com/ymz-ncnk/go-client-server-communication-benchmarks/common";
+
+// protoc --go_out=. --go_opt=paths=source_relative ./common/data.proto
+
+message ProtoData {
+  bool Bool = 1;
+  int64 Int64 = 2;
+  string String = 3;
+  double Float64 = 4;
+}

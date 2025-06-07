@@ -1,52 +1,64 @@
 module github.com/ymz-ncnk/go-client-server-communication-benchmarks
 
-go 1.22.7
+go 1.23.0
 
-toolchain go1.23.3
+toolchain go1.24.1
 
 require (
 	github.com/brianvoe/gofakeit v3.18.0+incompatible
 	github.com/cloudwego/fastpb v0.0.5
-	github.com/cloudwego/kitex v0.11.3
-	github.com/cmd-stream/base-go v0.0.0-20241126232756-979c1388a1d8
-	github.com/cmd-stream/cmd-stream-go v0.0.0-20241128210339-c08fc90a14d9
-	github.com/cmd-stream/delegate-go v0.0.0-20241126233520-6337eaaef0fe
-	github.com/cmd-stream/transport-go v0.0.0-20241126234001-8b4a67342593
+	github.com/cloudwego/kitex v0.13.1
+	github.com/cmd-stream/base-go v0.0.0-20250326005258-f9dd4c8436a2
+	github.com/cmd-stream/cmd-stream-go v0.4.1-0.20250604235501-95e8b31db451
+	github.com/cmd-stream/core-go v0.0.0-20250602134159-c37a0a251158
+	github.com/cmd-stream/delegate-go v0.0.0-20250602164806-f3287deb62cd
+	github.com/cmd-stream/transport-go v0.0.0-20250602165251-588736e072ce
 	github.com/montanaflynn/stats v0.7.1
-	github.com/mus-format/mus-stream-go v0.4.1
-	google.golang.org/grpc v1.68.0
-	google.golang.org/protobuf v1.35.2
+	github.com/mus-format/mus-stream-go v0.7.0
+	google.golang.org/grpc v1.72.0
+	google.golang.org/protobuf v1.36.6
 )
 
 require (
-	github.com/apache/thrift v0.13.0 // indirect
+	github.com/cmd-stream/codec-mus-stream-go v0.0.0-20250603153934-780cd97e6d03 // indirect
+	github.com/cmd-stream/sender-go v0.0.0-20250603160412-788b660ce852 // indirect
+	github.com/mus-format/dts-stream-go v0.9.0 // indirect
+	github.com/mus-format/ext-mus-stream-go v0.0.0-20250424190117-02f7e9442021 // indirect
+	github.com/mus-format/musgen-go v0.2.1-0.20250606195305-861223f60a8c // indirect
+	github.com/ymz-ncnk/assert v0.0.0-20250528151733-c41b2fca7933 // indirect
+	golang.org/x/mod v0.24.0 // indirect
+	golang.org/x/sys v0.32.0 // indirect
+	golang.org/x/tools v0.32.0 // indirect
+)
+
+require (
 	github.com/bufbuild/protocompile v0.14.1 // indirect
-	github.com/bytedance/gopkg v0.1.1 // indirect
-	github.com/bytedance/sonic v1.12.5 // indirect
-	github.com/bytedance/sonic/loader v0.2.1 // indirect
-	github.com/cloudwego/base64x v0.1.4 // indirect
-	github.com/cloudwego/configmanager v0.2.2 // indirect
-	github.com/cloudwego/dynamicgo v0.4.6 // indirect
-	github.com/cloudwego/frugal v0.2.2 // indirect
-	github.com/cloudwego/gopkg v0.1.3 // indirect
+	github.com/bytedance/gopkg v0.1.2 // indirect
+	github.com/bytedance/sonic v1.13.2 // indirect
+	github.com/bytedance/sonic/loader v0.2.4 // indirect
+	github.com/cloudwego/base64x v0.1.5 // indirect
+	github.com/cloudwego/configmanager v0.2.3 // indirect
+	github.com/cloudwego/dynamicgo v0.6.3 // indirect
+	github.com/cloudwego/frugal v0.2.5 // indirect
+	github.com/cloudwego/gopkg v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
-	github.com/cloudwego/localsession v0.1.1 // indirect
-	github.com/cloudwego/netpoll v0.6.4 // indirect
+	github.com/cloudwego/localsession v0.1.2 // indirect
+	github.com/cloudwego/netpoll v0.7.0 // indirect
 	github.com/cloudwego/runtimex v0.1.1 // indirect
-	github.com/cloudwego/thriftgo v0.3.18 // indirect
-	github.com/cmd-stream/handler-go v0.0.0-20241126234032-6b9e57a2e810 // indirect
+	github.com/cloudwego/thriftgo v0.4.1 // indirect
+	github.com/cmd-stream/handler-go v0.0.0-20250602165153-3a7b05a77e33 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
-	github.com/google/pprof v0.0.0-20241128161848-dc51965c6481 // indirect
+	github.com/google/pprof v0.0.0-20250423184734-337e5dd93bb4 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
 	github.com/jhump/protoreflect v1.17.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/cpuid/v2 v2.2.9 // indirect
+	github.com/klauspost/cpuid/v2 v2.2.10 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	github.com/modern-go/gls v0.0.0-20220109145502-612d0167dce5 // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/mus-format/common-go v0.0.0-20240704141923-ea7d12c7eed3 // indirect
+	github.com/mus-format/common-go v0.0.0-20250307125743-867bbd6eb59c // indirect
+	github.com/mus-format/mus-go v0.7.0
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/testify v1.10.0 // indirect
 	github.com/tidwall/gjson v1.18.0 // indirect
@@ -55,12 +67,12 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ymz-ncnk/jointwork-go v0.0.0-20240428103805-1ee224bde88a // indirect
 	github.com/ymz-ncnk/multierr-go v0.0.0-20230813140901-5e9302c2e02a // indirect
-	golang.org/x/arch v0.12.0 // indirect
-	golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f // indirect
-	golang.org/x/net v0.31.0 // indirect
-	golang.org/x/sync v0.9.0 // indirect
-	golang.org/x/sys v0.27.0 // indirect
-	golang.org/x/text v0.20.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20241118233622-e639e219e697 // indirect
+	golang.org/x/arch v0.16.0 // indirect
+	golang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0 // indirect
+	golang.org/x/net v0.39.0 // indirect
+	golang.org/x/sync v0.13.0 // indirect
+	// golang.org/x/sys v0.27.0 // indirect
+	golang.org/x/text v0.24.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20250425173222-7b384671a197 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
