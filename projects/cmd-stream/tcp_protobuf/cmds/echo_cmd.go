@@ -22,7 +22,3 @@ func (c EchoCmd) Exec(ctx context.Context, seq core.Seq, at time.Time,
 	_, err = proxy.Send(seq, results.EchoResult{ProtoData: c.ProtoData})
 	return
 }
-
-func (c EchoCmd) LastOne() bool {
-	return true
-}

@@ -49,6 +49,12 @@ func ToProtoData(dataSet [][]Data) [][]*ProtoData {
 	return s
 }
 
+func EqualData(d1, d2 Data) bool {
+	return d1.Bool == d2.Bool && d1.Int64 == d2.Int64 &&
+		d1.String == d2.String &&
+		d1.Float64 == d2.Float64
+}
+
 func EqualProtoData(d1, d2 *ProtoData) bool {
 	return d1.Bool == d2.Bool && d1.Int64 == d2.Int64 &&
 		d1.String_ == d2.String_ &&

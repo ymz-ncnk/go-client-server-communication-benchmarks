@@ -2,7 +2,6 @@ package tcpmus
 
 import (
 	"context"
-	"reflect"
 	"sync"
 	"testing"
 	"time"
@@ -25,7 +24,7 @@ func ExchangeQPS(cmd cmds.EchoCmd, sender sndr.Sender[receiver.Receiver],
 		b.Error(err)
 		return
 	}
-	if !reflect.DeepEqual(common.Data(cmd), common.Data(result.(results.EchoResult))) {
+	if !common.EqualData(common.Data(cmd), common.Data(result.(results.EchoResult))) {
 		b.Error("unexpected result")
 	}
 }
@@ -43,7 +42,7 @@ func ExchangeFixed(cmd cmds.EchoCmd, sender sndr.Sender[receiver.Receiver],
 		return
 	}
 	common.QueueCopD(copsD, time.Since(start))
-	if !reflect.DeepEqual(common.Data(cmd), common.Data(result.(results.EchoResult))) {
+	if !common.EqualData(common.Data(cmd), common.Data(result.(results.EchoResult))) {
 		b.Error("unexpected result")
 	}
 }

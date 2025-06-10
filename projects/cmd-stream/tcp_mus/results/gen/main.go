@@ -9,7 +9,7 @@ import (
 	genops "github.com/mus-format/musgen-go/options/generate"
 	introps "github.com/mus-format/musgen-go/options/interface"
 	assert "github.com/ymz-ncnk/assert/panic"
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd-stream/tcp_mus/results"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/cmd-stream/tcp_mus/results"
 )
 
 func init() {
@@ -18,7 +18,7 @@ func init() {
 
 func main() {
 	g, err := musgen.NewCodeGenerator(
-		genops.WithPkgPath("github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd-stream/tcp_mus/results"),
+		genops.WithPkgPath("github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/cmd-stream/tcp_mus/results"),
 		genops.WithStream(),
 	)
 	assert.EqualError(err, nil)

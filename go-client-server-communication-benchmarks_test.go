@@ -24,6 +24,7 @@ import (
 	cstp "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/cmd-stream/tcp_protobuf"
 	cstp_cmds "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/cmd-stream/tcp_protobuf/cmds"
 	cstp_rcvr "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/cmd-stream/tcp_protobuf/receiver"
+	cstp_rslts "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/cmd-stream/tcp_protobuf/results"
 	ghp "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/grpc/http2_protobuf"
 	kthp "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/kitex/ttheader_protobuf"
 	kthp_echo "github.com/ymz-ncnk/go-client-server-communication-benchmarks/projects/kitex/ttheader_protobuf/kitex_gen/echo"
@@ -281,7 +282,7 @@ func BenchmarkFixed(b *testing.B) {
 }
 
 // -----------------------------------------------------------------------------
-// net/http/HTTP,JSON
+// nethttp/HTTP,JSON
 // -----------------------------------------------------------------------------
 
 func benchmarkQPS_NetHTTP_JSON(clientsCount int, dataSet [][]common.Data,
@@ -507,7 +508,7 @@ func benchmark_CmdStream_TCP_MUS(clientsCount, N int,
 	var (
 		addr        = "127.0.0.1:9003"
 		wgS         = &sync.WaitGroup{}
-		serverCodec = cdc.NewServerCodec(cstm_rslts.ResultMUS, cstm_cmds.CmdMUS)
+		serverCodec = cdc.NewServerCodec(cstm_cmds.CmdMUS, cstm_rslts.ResultMUS)
 		clientCodec = cdc.NewClientCodec(cstm_cmds.CmdMUS, cstm_rslts.ResultMUS)
 	)
 	server, err := cs.StartServer(addr, clientsCount, serverCodec, cstm_rcvr.Receiver{}, wgS)
@@ -583,8 +584,8 @@ func benchmark_CmdStream_TCP_Protobuf(clientsCount, N int,
 	var (
 		addr        = "127.0.0.1:9004"
 		wgS         = &sync.WaitGroup{}
-		serverCodec = cstp.NewServerCodec(make([]byte, 2000))
-		clientCodec = cstp.NewClientCodec(make([]byte, 2000))
+		serverCodec = cdc.NewTypedServerCodec(cstp_cmds.EchoCmdMUS, cstp_rslts.EchoResultMUS)
+		clientCodec = cdc.NewTypedClientCodec(cstp_cmds.EchoCmdMUS, cstp_rslts.EchoResultMUS)
 	)
 	server, err := cs.StartServer(addr, clientsCount, serverCodec, cstp_rcvr.Receiver{}, wgS)
 	if err != nil {
