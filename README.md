@@ -1,4 +1,4 @@
-# go-client-server-communication-benchmarks
+# go-client-server-benchmarks
 This project compares the performance of several client-server communication
 libraries/frameworks for Golang.
 
