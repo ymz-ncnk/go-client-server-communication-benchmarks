@@ -6,6 +6,7 @@ libraries/frameworks for Golang.
 - [google.golang.org/grpc](https://pkg.go.dev/google.golang.org/grpc)
 - [github.com/cloudwego/kitex](https://github.com/cloudwego/kitex)
 - [github.com/cmd-stream/cmd-stream-go](https://github.com/cmd-stream/cmd-stream-go)
+- [net/http](https://pkg.go.dev/net/http)
 
 # Short Benchmarks Description
 In this benchmarks 1,2,4,8,16 clients send echo requests to the server as
@@ -24,7 +25,7 @@ All [results](results) were obtained on a single laptop (with the connected
 charger and fan running at full speed):
 - CPU: AMD Ryzen 7 PRO 5850U with Radeon Graphics
 - OS: Gentoo 5.19.9-gentoo x86_64 GNU/Linux
-- Go: 1.22.7
+- Go: 1.24.1
 
 with the following commands:
 ```bash
