@@ -1,6 +1,6 @@
 # go-client-server-benchmarks
-This project compares the performance of several client-server communication
-libraries/frameworks for Golang.
+This project compares the performance of several client-server communication 
+libraries and frameworks for Go.
 
 # Tested libraries/frameworks
 - [google.golang.org/grpc](https://pkg.go.dev/google.golang.org/grpc)
