@@ -1,3 +1,5 @@
+//go:generate go run ./gen/fixed2csv/ -i ./results/fixed/benchmarks.txt -d ./results/fixed
+//go:generate go run ./gen/qps2csv/ -i ./results/qps/benchmarks.txt -d ./results/qps
 package gcscb
 
 import (

@@ -1,10 +1,8 @@
 package main
 
-import (
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd"
-)
+import "github.com/ymz-ncnk/go-client-server-communication-benchmarks/gen"
 
-type BenchData map[cmd.BenchCase][]int
+type BenchData map[gen.BenchCase][]int
 
 func BenchToMetricData(data BenchData, div float64) MetricData {
 	metrics := make(MetricData)

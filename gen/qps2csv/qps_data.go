@@ -3,7 +3,7 @@ package main
 import (
 	"sort"
 
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/gen"
 )
 
 type QPS float64
@@ -23,7 +23,7 @@ func QPSToCSVData(qpsData QPSData) CSVData {
 	}
 	data := CSVData{
 		headers: make([]string, 0, len(headers)+1),
-		values:  make([][]int, cmd.Log2Convert(maxN)+1),
+		values:  make([][]int, gen.Log2Convert(maxN)+1),
 	}
 	data.headers = append(data.headers, "clients")
 	for header := range headers {
@@ -44,7 +44,7 @@ func QPSToCSVData(qpsData QPSData) CSVData {
 				break
 			}
 		}
-		clients := cmd.Log2Convert(c.N)
+		clients := gen.Log2Convert(c.N)
 		data.values[clients][0] = c.N
 		data.values[clients][i] = int(qps)
 	}

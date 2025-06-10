@@ -3,10 +3,10 @@ package main
 import (
 	"sort"
 
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/gen"
 )
 
-type MetricData map[cmd.BenchCase]float64
+type MetricData map[gen.BenchCase]float64
 
 func MetricToCSVData(data MetricData) CSVData {
 	var (
@@ -21,7 +21,7 @@ func MetricToCSVData(data MetricData) CSVData {
 	}
 	csv := CSVData{
 		headers: make([]string, 0, len(headers)+1),
-		values:  make([][]float64, cmd.Log2Convert(maxN)+1),
+		values:  make([][]float64, gen.Log2Convert(maxN)+1),
 	}
 	csv.headers = append(csv.headers, "clients")
 	for header := range headers {
@@ -39,7 +39,7 @@ func MetricToCSVData(data MetricData) CSVData {
 				break
 			}
 		}
-		rowIndex := cmd.Log2Convert(c.N)
+		rowIndex := gen.Log2Convert(c.N)
 		csv.values[rowIndex][0] = float64(c.N)
 		csv.values[rowIndex][colIndex] = value
 	}

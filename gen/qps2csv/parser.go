@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/gen"
 )
 
 var lineRe = regexp.MustCompile(`^BenchmarkQPS/(\d+)/([^\s]+)-\d+\s+(\d+)\s+(\d+)\s+ns$`)
@@ -40,7 +40,7 @@ func (p Parser) Parse() (benchData BenchData, err error) {
 		return
 	}
 	if !ok {
-		err = cmd.NewNotBenchmarksFileError(p.file.Name())
+		err = gen.NewNotBenchmarksFileError(p.file.Name())
 		return
 	}
 	return p.benchData, nil
@@ -53,11 +53,11 @@ func (p Parser) parseLine(line string) (err error) {
 	}
 	var (
 		name = matches[2]
-		key  = BenchCase{Name: name, N: cmd.StrToInt(matches[1])}
+		key  = BenchCase{Name: name, N: gen.StrToInt(matches[1])}
 	)
 	p.benchData[key] = append(p.benchData[key], BenchEntry{
-		Iter: cmd.StrToInt(matches[3]),
-		Ns:   cmd.StrToInt64(matches[4]),
+		Iter: gen.StrToInt(matches[3]),
+		Ns:   gen.StrToInt64(matches[4]),
 	})
 	return
 }

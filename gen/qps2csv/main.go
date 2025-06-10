@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/gen"
 )
 
 const (
@@ -12,7 +12,7 @@ const (
 )
 
 func main() {
-	inputFile, outputDir := cmd.ParseFlags()
+	inputFile, outputDir := gen.ParseFlags()
 
 	file, err := os.Open(inputFile)
 	if err != nil {
@@ -30,7 +30,7 @@ func main() {
 		csvData = QPSToCSVData(qpsData)
 		path    = filepath.Join(outputDir, FileName)
 	)
-	if err = cmd.WriteCSV(path, csvData); err != nil {
+	if err = gen.WriteCSV(path, csvData); err != nil {
 		panic(err)
 	}
 }

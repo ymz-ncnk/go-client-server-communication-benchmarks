@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/cmd"
+	"github.com/ymz-ncnk/go-client-server-communication-benchmarks/gen"
 )
 
 var lineRe = regexp.MustCompile(
@@ -71,7 +71,7 @@ func (p Parser) Parse() (nsData, copData, maxData, medData, minData, p99Data,
 		return
 	}
 	if !ok {
-		err = cmd.NewNotBenchmarksFileError(p.file.Name())
+		err = gen.NewNotBenchmarksFileError(p.file.Name())
 		return
 	}
 	return p.nsData, p.copData, p.maxData, p.medData, p.minData, p.p99Data, p.bData, p.allocData, nil
@@ -84,7 +84,7 @@ func (p Parser) parseLine(line string) error {
 	}
 	name := matches[2]
 	n, _ := strconv.Atoi(matches[1])
-	key := cmd.BenchCase{Name: name, N: n}
+	key := gen.BenchCase{Name: name, N: n}
 
 	// Parse values
 	ns, _ := strconv.Atoi(matches[3])
