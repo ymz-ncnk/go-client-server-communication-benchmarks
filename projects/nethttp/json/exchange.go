@@ -3,7 +3,6 @@ package nhj
 import (
 	"bytes"
 	"encoding/json"
-	"io"
 	"net/http"
 	"sync"
 	"testing"
@@ -45,23 +44,18 @@ func ExchangeFixed(url string, data common.Data, client *http.Client,
 	}
 }
 
-func send(url string, data common.Data, client *http.Client) (common.Data, error) {
-	jsonData, err := json.Marshal(data)
+func send(url string, data common.Data, client *http.Client) (result common.Data,
+	err error) {
+	buf := new(bytes.Buffer)
+	err = json.NewEncoder(buf).Encode(data)
 	if err != nil {
-		return common.Data{}, err
+		return
 	}
-	resp, err := client.Post(url, "application/json", bytes.NewBuffer(jsonData))
+	resp, err := client.Post(url, "application/json", buf)
 	if err != nil {
 		return common.Data{}, err
 	}
 	defer resp.Body.Close()
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return common.Data{}, err
-	}
-	var adata common.Data
-	if err := json.Unmarshal(body, &adata); err != nil {
-		return common.Data{}, err
-	}
-	return adata, nil
+	err = json.NewDecoder(resp.Body).Decode(&result)
+	return
 }

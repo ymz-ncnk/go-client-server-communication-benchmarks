@@ -1,6 +1,6 @@
-clients,cmd-stream_tcp_mus,cmd-stream_tcp_protobuf,grpc_http2_protobuf,kitex_ttheader_protobuf,nethttp_json
-1,0.594,0.692,1.932,0.766,11.481
-2,0.444,0.503,1.261,0.731,3.297
-4,0.368,0.396,1.045,0.726,2.045
-8,0.343,0.383,1.055,0.729,1.331
-16,0.336,0.367,1.008,0.747,0.932
+clients,cmd-stream_tcp_mus,cmd-stream_tcp_protobuf,grpc_http2_protobuf,kitex_ttheader_protobuf
+1,0.611,0.727,2.061,0.774
+2,0.466,0.522,1.294,0.747
+4,0.369,0.405,1.085,0.741
+8,0.348,0.381,1.080,0.747
+16,0.341,0.375,1.042,0.764

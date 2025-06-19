@@ -11,8 +11,7 @@ libraries and frameworks for Go.
 # Short Benchmarks Description
 In this benchmarks 1,2,4,8,16 clients send echo requests to the server as
 follows:
-- Each client uses only one connection and executes all echo requests
-  simultaneously in separate goroutines.
+- Each client executes all echo requests simultaneously in separate goroutines.
 - The same data is used for all participants, it is generated once and then 
   used by everyone.
 - Size of the data varies from 17 to 1024 bytes.
@@ -34,6 +33,12 @@ go test -bench BenchmarkFixed -benchtime=100000x -benchmem -count=10
 ```
 
 ![image](results/qps/img/qps.png)
+
+\* <small>The delay on the server is quite long - 30 ms. As a result, `net/http` 
+performs very slowly. Due to head-of-line (HOL) blocking, a single connection 
+can handle only about 33 requests per second (1000 ms / 30 ms). Because it takes 
+too long to complete, `net/http` is not included in the benchmarks for 100,000 
+requests.</small>
 
 To get more comparable results, let's check how well all participants can 
 handle 100,000 simultaneous requests:
