@@ -6,7 +6,6 @@ libraries and frameworks for Go.
 - [google.golang.org/grpc](https://pkg.go.dev/google.golang.org/grpc)
 - [github.com/cloudwego/kitex](https://github.com/cloudwego/kitex)
 - [github.com/cmd-stream/cmd-stream-go](https://github.com/cmd-stream/cmd-stream-go)
-- [net/http](https://pkg.go.dev/net/http)
 
 # Short Benchmarks Description
 In this benchmarks 1,2,4,8,16 clients send echo requests to the server as
