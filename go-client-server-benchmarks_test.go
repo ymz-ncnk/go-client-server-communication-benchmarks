@@ -6,7 +6,6 @@ import (
 	"errors"
 	"flag"
 	"net"
-	"net/http"
 	"os"
 	"strconv"
 	"strings"
@@ -40,9 +39,6 @@ const (
 	NMetric    = "N"
 )
 
-type ExchangeFn_NetHTTP = func(url string, data common.Data, client *http.Client,
-	wg *sync.WaitGroup, b *testing.B)
-
 type ExchangeFn_gRPC = func(data *common.ProtoData,
 	client ghp.EchoServiceClient, wg *sync.WaitGroup, b *testing.B)
 
@@ -67,9 +63,6 @@ func BenchmarkQPS(b *testing.B) {
 	b.Run("1", func(b *testing.B) {
 		clientsCount := 1
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkQPS_NetHTTP_JSON(clientsCount, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkQPS_gRPC_HTTP2_Protobuf(clientsCount, ghpDataSet, b)
 		})
@@ -87,9 +80,6 @@ func BenchmarkQPS(b *testing.B) {
 	b.Run("2", func(b *testing.B) {
 		clientsCount := 2
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkQPS_NetHTTP_JSON(clientsCount, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkQPS_gRPC_HTTP2_Protobuf(clientsCount, ghpDataSet, b)
 		})
@@ -107,9 +97,6 @@ func BenchmarkQPS(b *testing.B) {
 	b.Run("4", func(b *testing.B) {
 		clientsCount := 4
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkQPS_NetHTTP_JSON(clientsCount, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkQPS_gRPC_HTTP2_Protobuf(clientsCount, ghpDataSet, b)
 		})
@@ -127,9 +114,6 @@ func BenchmarkQPS(b *testing.B) {
 	b.Run("8", func(b *testing.B) {
 		clientsCount := 8
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkQPS_NetHTTP_JSON(clientsCount, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkQPS_gRPC_HTTP2_Protobuf(clientsCount, ghpDataSet, b)
 		})
@@ -147,9 +131,6 @@ func BenchmarkQPS(b *testing.B) {
 	b.Run("16", func(b *testing.B) {
 		clientsCount := 16
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkQPS_NetHTTP_JSON(clientsCount, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkQPS_gRPC_HTTP2_Protobuf(clientsCount, ghpDataSet, b)
 		})
@@ -184,9 +165,6 @@ func BenchmarkFixed(b *testing.B) {
 	b.Run("1", func(b *testing.B) {
 		clientsCount := 1
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkFixed_NetHTTP_JSON(clientsCount, n, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkFixed_gRPC_HTTP2_Protobuf(clientsCount, n, ghpDataSet, b)
 		})
@@ -204,9 +182,6 @@ func BenchmarkFixed(b *testing.B) {
 	b.Run("2", func(b *testing.B) {
 		clientsCount := 2
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkFixed_NetHTTP_JSON(clientsCount, n, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkFixed_gRPC_HTTP2_Protobuf(clientsCount, n, ghpDataSet, b)
 		})
@@ -224,9 +199,6 @@ func BenchmarkFixed(b *testing.B) {
 	b.Run("4", func(b *testing.B) {
 		clientsCount := 4
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkFixed_NetHTTP_JSON(clientsCount, n, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkFixed_gRPC_HTTP2_Protobuf(clientsCount, n, ghpDataSet, b)
 		})
@@ -244,9 +216,6 @@ func BenchmarkFixed(b *testing.B) {
 	b.Run("8", func(b *testing.B) {
 		clientsCount := 8
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkFixed_NetHTTP_JSON(clientsCount, n, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkFixed_gRPC_HTTP2_Protobuf(clientsCount, n, ghpDataSet, b)
 		})
@@ -264,9 +233,6 @@ func BenchmarkFixed(b *testing.B) {
 	b.Run("16", func(b *testing.B) {
 		clientsCount := 16
 
-		// b.Run("nethttp_json", func(b *testing.B) {
-		// 	benchmarkFixed_NetHTTP_JSON(clientsCount, n, dataSet, b)
-		// })
 		b.Run("grpc_http2_protobuf", func(b *testing.B) {
 			benchmarkFixed_gRPC_HTTP2_Protobuf(clientsCount, n, ghpDataSet, b)
 		})
@@ -282,61 +248,6 @@ func BenchmarkFixed(b *testing.B) {
 	})
 
 }
-
-// // -----------------------------------------------------------------------------
-// // nethttp/HTTP,JSON
-// // -----------------------------------------------------------------------------
-
-// func benchmarkQPS_NetHTTP_JSON(clientsCount int, dataSet [][]common.Data,
-// 	b *testing.B) {
-// 	benchmark_NetHTTP_JSON(clientsCount, 0, dataSet, nhj.ExchangeQPS, b)
-// 	b.ReportMetric(0, NsOpMetric)
-// 	b.ReportMetric(float64(b.Elapsed()), NsMetric)
-// }
-
-// // func benchmarkFixed_NetHTTP_JSON(clientsCount, n int, dataSet [][]common.Data,
-// // 	b *testing.B) {
-// // 	var (
-// // 		copsD      = make(chan time.Duration, n)
-// // 		exchangeFn = func(url string, data common.Data, client *http.Client,
-// // 			wg *sync.WaitGroup,
-// // 			b *testing.B,
-// // 		) {
-// // 			nhj.ExchangeFixed(url, data, client, copsD, wg, b)
-// // 		}
-// // 		N = n / clientsCount
-// // 	)
-// // 	benchmark_NetHTTP_JSON(clientsCount, N, dataSet, exchangeFn, b)
-// // 	b.ReportMetric(float64(N), NMetric)
-// // 	reportMetrics(copsD, b)
-// // }
-
-// func benchmark_NetHTTP_JSON(clientsCount int, N int, dataSet [][]common.Data,
-// 	exchangeFn ExchangeFn_NetHTTP, b *testing.B) {
-// 	var (
-// 		addr = "127.0.0.1:9000"
-// 		wgS  = &sync.WaitGroup{}
-// 	)
-// 	server, url := nhj.StartServer(addr, wgS)
-// 	client := nhj.MakeBufferedClient(clientsCount)
-// 	b.ResetTimer()
-// 	wg := &sync.WaitGroup{}
-// 	var i int
-// 	for i = 0; i < b.N; i++ {
-// 		if N != 0 && i == N {
-// 			break
-// 		}
-// 		wg.Add(clientsCount)
-// 		for j := range clientsCount {
-// 			go exchangeFn(url, dataSet[j][i], client, wg, b)
-// 		}
-// 	}
-// 	wg.Wait()
-// 	b.StopTimer()
-// 	if err := nhj.CloseServer(server, wgS); err != nil {
-// 		b.Fatal(err)
-// 	}
-// }
 
 // -----------------------------------------------------------------------------
 // gRPC/HTTP2,Protobuf
